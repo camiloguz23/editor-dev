@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: ^4.5.16
     version: 4.5.16(typescript@5.4.4)
+  split-grid:
+    specifier: ^1.0.11
+    version: 1.0.11
   typescript:
     specifier: ^5.4.4
     version: 5.4.4
@@ -3347,6 +3350,10 @@ packages:
 
   /space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
+    dev: false
+
+  /split-grid@1.0.11:
+    resolution: {integrity: sha512-ELtFtxc3r5we5GZfe6Fi0BFFxIi2M6BY1YEntBscKRDD3zx4JVHqx2VnTRSQu1BixCYSTH3MTjKd4esI2R7EgQ==}
     dev: false
 
   /sprintf-js@1.0.3:

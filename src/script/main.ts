@@ -1,4 +1,18 @@
+import Split from 'split-grid'
+
 // src="data:text/html;base64,PHA+aG9sYSBtdW5kbzwvcD4="
+
+Split({
+	columnGutters: [{
+    track: 1,
+    element: document.querySelector('.vertical-gutter') as HTMLElement,
+  }],
+  rowGutters: [{
+  	track: 1,
+    element: document.querySelector('.horizontal-gutter') as HTMLElement,
+  }]
+})
+
 
 const getByID = (id: string) => document.getElementById(id);
 const html: HTMLTextAreaElement = getByID("html") as HTMLTextAreaElement;

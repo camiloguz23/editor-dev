@@ -16,6 +16,8 @@ import MainLayout from "../layout/main-layout.astro";
     <section class="iframe">
       <iframe srcdoc="" id="iframe" title="html"></iframe>
     </section>
+    <div class="horizontal-gutter"></div>
+    <div class="vertical-gutter"></div>
   </main>
 </MainLayout>
 
@@ -23,13 +25,13 @@ import MainLayout from "../layout/main-layout.astro";
 
 <style>
   main {
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     display: grid;
-    grid:
-      "html css" 1fr
-      "js iframe" 1fr
-      /1fr 1fr;
+    grid-template-columns: 1fr 4px 1fr;
+    grid-template-rows: 1fr 4px 1fr;
   }
+
   section {
     height: 100%;
     width: 100%;
@@ -43,25 +45,39 @@ import MainLayout from "../layout/main-layout.astro";
     padding: 8px;
     font-size: 22px;
     resize: none;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 97% 95%;
   }
 
-  .html {
-    grid-area: html;
+  iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background-color: white;
   }
-  .css {
-    grid-area: css;
-  }
-  .js {
-    grid-area: js;
-  }
-  .iframe {
-    grid-area: iframe;
 
-    iframe {
-      height: 100%;
-      width: 100%;
-      border: 0;
-      background-color: white;
-    }
+  #html {
+    background-image: url("/img/html5.svg");
+  }
+
+  #css {
+    background-image: url("/img/css3.svg");
+  }
+
+  #js {
+    background-image: url("/img/js.svg");
+  }
+
+  .vertical-gutter {
+    grid-area: 1 / 2 / 4 / 2;
+    border: solid 1px white;
+    cursor: col-resize;
+  }
+
+  .horizontal-gutter {
+    grid-area: 2 / 1 / 2 / 4;
+    border: solid 1px white;
+    cursor: row-resize;
   }
 </style>
