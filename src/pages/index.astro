@@ -1,0 +1,63 @@
+---
+import MainLayout from "../layout/main-layout.astro";
+---
+
+<MainLayout title="Editor Dev">
+  <main>
+    <section class="html">
+      <textarea name="" id="html"></textarea>
+    </section>
+    <section class="css">
+      <textarea name="" id="css"></textarea>
+    </section>
+    <section class="js">
+      <textarea name="" id="js"></textarea>
+    </section>
+    <section class="iframe">
+      <iframe srcdoc="" id="iframe" title="html"></iframe>
+    </section>
+  </main>
+</MainLayout>
+
+<script src="../script/main.ts"></script>
+
+<style>
+  main {
+    height: 100%;
+    display: grid;
+    grid:
+      "html css" 1fr
+      "js iframe" 1fr
+      /1fr 1fr;
+  }
+  section {
+    height: 100%;
+    width: 100%;
+  }
+
+  textarea {
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+  }
+
+  .html {
+    grid-area: html;
+  }
+  .css {
+    grid-area: css;
+  }
+  .js {
+    grid-area: js;
+  }
+  .iframe {
+    grid-area: iframe;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+      border: 0;
+      background-color: white;
+    }
+  }
+</style>
