@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.5.16",
+    "monaco-editor": "0.47.0",
     "split-grid": "^1.0.11",
     "typescript": "^5.4.4"
   }

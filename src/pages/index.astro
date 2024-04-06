@@ -4,15 +4,9 @@ import MainLayout from "../layout/main-layout.astro";
 
 <MainLayout title="Editor Dev">
   <main>
-    <section class="html">
-      <textarea name="" id="html"></textarea>
-    </section>
-    <section class="css">
-      <textarea name="" id="css"></textarea>
-    </section>
-    <section class="js">
-      <textarea name="" id="js"></textarea>
-    </section>
+    <section class="html" id="html"></section>
+    <section class="css" id="css"></section>
+    <section class="js" id="js"></section>
     <section class="iframe">
       <iframe srcdoc="" id="iframe" title="html"></iframe>
     </section>
@@ -28,13 +22,26 @@ import MainLayout from "../layout/main-layout.astro";
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 4px 1fr;
-    grid-template-rows: 1fr 4px 1fr;
+    grid-template-columns: 49.6% .3% 49.6%;
+    grid-template-rows: 49.6% .3% 49.6%;
   }
 
   section {
     height: 100%;
     width: 100%;
+    position: relative;
+  }
+
+  section::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 50;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   textarea {
@@ -57,15 +64,15 @@ import MainLayout from "../layout/main-layout.astro";
     background-color: white;
   }
 
-  #html {
+  #html::after {
     background-image: url("/img/html5.svg");
   }
 
-  #css {
+  #css::after {
     background-image: url("/img/css3.svg");
   }
 
-  #js {
+  #js::after {
     background-image: url("/img/js.svg");
   }
 

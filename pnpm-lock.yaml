@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: ^4.5.16
     version: 4.5.16(typescript@5.4.4)
+  monaco-editor:
+    specifier: 0.47.0
+    version: 0.47.0
   split-grid:
     specifier: ^1.0.11
     version: 1.0.11
@@ -2752,6 +2755,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /monaco-editor@0.47.0:
+    resolution: {integrity: sha512-VabVvHvQ9QmMwXu4du008ZDuyLnHs9j7ThVFsiJoXSOQk18+LF89N4ADzPbFenm0W4V2bGHnFBztIRQTgBfxzw==}
+    dev: false
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
