@@ -22,8 +22,8 @@ import MainLayout from "../layout/main-layout.astro";
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 49.6% .3% 49.6%;
-    grid-template-rows: 49.6% .3% 49.6%;
+    grid-template-columns: 49.6% .2% 49.6%;
+    grid-template-rows: 49.6% .2% 49.6%;
   }
 
   section {
@@ -42,19 +42,6 @@ import MainLayout from "../layout/main-layout.astro";
     height: 48px;
     background-repeat: no-repeat;
     background-size: contain;
-  }
-
-  textarea {
-    background-color: #333;
-    height: 100%;
-    width: 100%;
-    color: white;
-    padding: 8px;
-    font-size: 22px;
-    resize: none;
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: 97% 95%;
   }
 
   iframe {
@@ -78,13 +65,13 @@ import MainLayout from "../layout/main-layout.astro";
 
   .vertical-gutter {
     grid-area: 1 / 2 / 4 / 2;
-    border: solid 1px white;
+    border: solid 1px rgb(52, 47, 47);
     cursor: col-resize;
   }
 
   .horizontal-gutter {
     grid-area: 2 / 1 / 2 / 4;
-    border: solid 1px white;
+    border: solid 1px rgb(52, 47, 47);
     cursor: row-resize;
   }
 </style>
